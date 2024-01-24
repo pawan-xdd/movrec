@@ -11,3 +11,6 @@
 
 ## would be cool if you help me fix it..
 ## thxx
+
+
+## btw lemme know if any file is missing, i'll send the files
