@@ -4,6 +4,8 @@
 ## enter random details (password needs to be strong tho for some reason)
 ## hit register
 ## this error comes 
+<h6>(long ahh error in terminal but i guess this is what causing the issue)</h6>
+
 `` django.db.utils.OperationalError: no such table: auth_user
 ``
 # following this from a tutorial from [here](https://www.youtube.com/watch?v=Z3qTXmT0yoI&t=2865s)
@@ -11,3 +13,6 @@
 
 ## would be cool if you help me fix it..
 ## thxx
+
+
+## btw lemme know if any file is missing, i'll send the files
