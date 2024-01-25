@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9320f6f-b0ef-4871-81f6-c8496ed01dc5" name="Changes" comment="Initial Commit">
+    <list default="true" id="e9320f6f-b0ef-4871-81f6-c8496ed01dc5" name="Changes" comment="Fixed login error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_app/templates/movie_app/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/templates/movie_app/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_app/templates/movie_app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/templates/movie_app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_app/templates/movie_app/my-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/templates/movie_app/my-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_app/templates/movie_app/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/templates/movie_app/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +91,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706121710006</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed login error">
+      <option name="closed" value="true" />
+      <created>1706201610646</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706201610646</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,6 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Fixed login error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed login error" />
   </component>
 </project>
