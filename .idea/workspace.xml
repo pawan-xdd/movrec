@@ -4,15 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9320f6f-b0ef-4871-81f6-c8496ed01dc5" name="Changes" comment="Fixed login error">
+    <list default="true" id="e9320f6f-b0ef-4871-81f6-c8496ed01dc5" name="Changes" comment="Add bootstrap">
+      <change afterPath="$PROJECT_DIR$/movie_app/management/commands/import_movies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie_app/movies.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movie_app/templates/movie_app/movie_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie_app/templates/movie_app/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/templates/movie_app/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie_app/templates/movie_app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/templates/movie_app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie_app/templates/movie_app/my-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/templates/movie_app/my-login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movie_app/templates/movie_app/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/templates/movie_app/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -49,14 +54,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/movierec/movie_app/views.py",
+    "last_opened_file_path": "D:/movierec",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "two.files.diff.last.used.file": "D:/movierec/movie_app/views.py"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\movierec" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\movierec\movie_app" />
+      <recent name="D:\movierec" />
+      <recent name="D:\movierec\mysite" />
+      <recent name="D:\movierec\static" />
+      <recent name="D:\movierec\movie_app\templates\movie_app" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -99,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706201610646</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add bootstrap">
+      <option name="closed" value="true" />
+      <created>1706207317677</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706207317677</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +136,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Fixed login error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed login error" />
+    <MESSAGE value="Add bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add bootstrap" />
   </component>
 </project>

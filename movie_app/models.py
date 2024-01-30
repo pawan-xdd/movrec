@@ -7,3 +7,11 @@ class UserData(models.Model):
     email = models.EmailField(max_length=80)
     password = models.CharField(max_length=80)
 
+
+class Genre(models.Model):
+    name = models.CharField(max_length=255)
+
+
+class Movie(models.Model):
+    title = models.CharField(max_length=255)
+    genres = models.ManyToManyField(Genre)

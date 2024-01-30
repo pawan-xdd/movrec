@@ -1,18 +1,142 @@
+{% load static %}
 <html>
 <head>
-        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/lux/bootstrap.min.css">
         <style>
+            body {
+            display: flex;
+            align-items: center; /* Center vertically */
+            justify-content: flex-start; /* Align to the left */
+            height: 100vh; /* 100% of the viewport height */
+            margin: 0; /* Remove default body margin */
+            background-color: #f8f9fa; /* Set a background color */
+        }
+            .background-container{
+
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            }
         .container {
             width: 500px;
+
+        }
+      .checkbox-button {
+      cursor: pointer;
+      margin: 15px;
+      padding: 15px;
+      width: 150%;
+      text-align: left;
+      display: block;
+    }
+    .checkbox-button.selected {
+      background-color: #aaf;
+      font-size: 16px;
+    }
+            .btn-action {
+            background-color: #007bff; /* Blue */
+        }
+
+        .btn-romance {
+            background-color: #dc3545; /* Red */
+        }
+
+        .btn-horror {
+            background-color: #28a745; /* Green */
+        }
+
+        .btn-science {
+            background-color: #ffc107; /* Yellow */
+        }
+
+        .btn-thriller {
+            background-color: #6610f2; /* Purple */
+        }
+
+        .btn-comedy {
+            background-color: #17a2b8; /* Cyan */
+        }
+
+        .btn-drama {
+            background-color: #fd7e14; /* Orange */
+        }
+
+        .btn-mystery {
+            background-color: #6f42c1; /* Dark Purple */
+        }
+
+        .btn-adventure {
+            background-color: #e83e8c; /* Pink */
         }
     </style>
     </head>
-<body>
+<body background="{% static 'bg.jpg' %}">
 
+<div class="background-container">
  <div class="container">
-    <h1> This is my dashboard. </h1>
+    <h1 style="color:white;"> Select Your Genre. </h1>
 
-    <a href="{% url 'user-logout' %}"> Logout here </a>
+
+
+
+         <div class="container mt-5">
+                <div class="row">
+                    <div class="btn-group col-md-4" role="group" aria-label="Checkbox Group">
+                        <button type="button" class="btn btn-primary checkbox-button btn-action" onclick="toggleCheckbox(this)">Action</button>
+                        <button type="button" class="btn btn-primary checkbox-button btn-romance" onclick="toggleCheckbox(this)">Romance</button>
+                        <button type="button" class="btn btn-primary checkbox-button btn-horror" onclick="toggleCheckbox(this)">Horror</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="btn-group col-md-4" role="group" aria-label="Checkbox Group">
+                        <button type="button" class="btn btn-primary checkbox-button btn-science" onclick="toggleCheckbox(this)">Science </button>
+                        <button type="button" class="btn btn-primary checkbox-button btn-thriller" onclick="toggleCheckbox(this)">Thriller</button>
+                        <button type="button" class="btn btn-primary checkbox-button btn-comedy" onclick="toggleCheckbox(this)">Comedy</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="btn-group col-md-4" role="group" aria-label="Checkbox Group">
+                        <button type="button" class="btn btn-primary checkbox-button btn-drama" onclick="toggleCheckbox(this)">Drama</button>
+                        <button type="button" class="btn btn-primary checkbox-button btn-mystery" onclick="toggleCheckbox(this)">Mystery</button>
+                        <button type="button" class="btn btn-primary checkbox-button btn-adventure" onclick="toggleCheckbox(this)">Adventure</button>
+                    </div>
+                </div>
+            </div>
+             <form method="post" action="{% url 'movie_list' %}">
+            {% csrf_token %}
+            {% for genre in genres %}
+                <label class="btn btn-primary checkbox-button btn-{{ genre.name|lower }}">
+                    <input type="checkbox" name="genres" value="{{ genre.id }}"> {{ genre.name }}
+                </label>
+            {% endfor %}
+                 <br/>
+                 <br/>
+                 <br/>
+
+            <button type="submit" class="btn btn-success" >Submit</button>
+
+        </form>
+
+        <!-- Add Bootstrap JS and Popper.js scripts -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <script>
+          function toggleCheckbox(button) {
+            button.classList.toggle('selected');
+          }
+        </script>
+<br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+    <button type="button" class="btn btn-danger" ><a href="{% url 'user-logout' %}"> Logout here </a></button>
+
  </div>
+</div>
 </body>
 </html>
