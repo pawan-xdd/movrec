@@ -1,9 +1,10 @@
-# yo 
+<strike> 
+# yo <br/>
 ## this a login-register form
 ## go to 127.0.0.1:8000/register
 ## enter random details (password needs to be strong tho for some reason)
 ## hit register
-## this error comes 
+## ~~ this error comes ~~
 <h6>(long ahh error in terminal but i guess this is what causing the issue)</h6>
 
 `` django.db.utils.OperationalError: no such table: auth_user
@@ -15,4 +16,7 @@
 ## thxx
 
 
-## btw lemme know if any file is missing, i'll send the files
+## btw lemme know if any file is missing, i'll send the files]
+</strike>
+
+# fixed
