@@ -15,3 +15,8 @@ class Genre(models.Model):
 class Movie(models.Model):
     title = models.CharField(max_length=255)
     genres = models.ManyToManyField(Genre)
+    poster_url = models.URLField()  # Assuming the poster is stored as a URL
+    synopsis = models.TextField()
+    rating = models.DecimalField(max_digits=3, decimal_places=1)
+
+

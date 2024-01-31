@@ -1,29 +1,49 @@
 {% load static %}
-<html xmlns="http://www.w3.org/1999/html">
-    <head>
-        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/lux/bootstrap.min.css">
-        <style>
-            .log-container{
-            background: white;
-            border-radius: 10px;
-            height: 100vh;
-            }
-        .container {
-            width: 500px;
-        }
-            .btn-success a {
-            color: white;
-            text-decoration: none;
-        }
-            .btn-success {
-            background-color: #28a745; /* Green color for success button */
-            border-color: #28a745; /* Matching border color */
-    </style>
-    </head>
 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+
+    <style>
+       /* body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }*/
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 24px;
+            margin: 0 15px;
+        }
+    </style>
+</head>
 <body background="{% static 'bg.jpg' %}">
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-  <div class="container-fluid">
+   <div class="container-fluid">
     <a class="navbar-brand" href="#">MovRec</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -55,22 +75,16 @@
     </div>
   </div>
 </nav>
-<div class="log-container">
-     <div class="container">
-    <h1> Login here </h1>
-
-    <form method="POST" autocomplete="off">
-
-        {% csrf_token %}
-
-        {{loginform.as_p}}
-<button type="submit" class="btn btn-success">Login</button>
+<div class="container">
+        <h1>About</h1>
+            <ul>
+    <li><a href="https://github.com/pawan-xdd">Github</a></li>
+    <li><a href="https://x.com/pawan_xdd">X</a></li>
+    <li><a href="https://instagram.com/pawan.xdd">Instagram</a></li>
+</ul>
 
 
-
-    </form>
-     </div>
     </div>
-
+<button type="button" class="btn btn-danger" style="color:white;"><a href="{% url 'user-logout' %}"> Logout here </a></button>
 </body>
 </html>

@@ -68,25 +68,30 @@
         .btn-adventure {
             background-color: #e83e8c; /* Pink */
         }
-            btn-crime {
+            .btn-crime {
             background-color: #b075eb;
         }
-            btn-history {
+            .btn-history {
             background-color: #2ac97f;
         }
-            btn-biopic {
+            .btn-biopic {
             background-color: #972ac9;
         }
+
+            .extra{
+            margin: 15px;
+            padding: 15px;
+            }
     </style>
     </head>
 <body background="{% static 'bg.jpg' %}">
 
 <div class="background-container">
  <div class="container">
+     <br/>
+     <br/>
+
     <h1 style="color:white;"> Select Your Genre. </h1>
-
-
-
 
          <div class="container mt-5">
                 <div class="row">
@@ -101,25 +106,74 @@
                     <div class="btn-group col-md-4" role="group" aria-label="Checkbox Group">
                         <button type="button" class="btn btn-primary checkbox-button btn-science" onclick="toggleCheckbox(this)">Science </button>
                         <button type="button" class="btn btn-primary checkbox-button btn-thriller" onclick="toggleCheckbox(this)">Thriller</button>
-                        <button type="button" class="btn btn-primary checkbox-button btn-comedy" onclick="toggleCheckbox(this)">Comedy</button>
+                        <button type="button" class="btn btn-primary checkbox-button btn-comedy" onclick="toggleCheckbox(this)">Supernatural</button>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="btn-group col-md-4" role="group" aria-label="Checkbox Group">
-                        <button type="button" class="btn btn-primary checkbox-button btn-drama" onclick="toggleCheckbox(this)">Drama</button>
+                        <button type="button" class="btn btn-primary checkbox-button btn-drama" onclick="toggleCheckbox(this)">Western</button>
                         <button type="button" class="btn btn-primary checkbox-button btn-mystery" onclick="toggleCheckbox(this)">Mystery</button>
                         <button type="button" class="btn btn-primary checkbox-button btn-adventure" onclick="toggleCheckbox(this)">Adventure</button>
                     </div>
                 </div>
-             <div class="row">
-                    <div class="btn-group col-md-4" role="group" aria-label="Checkbox Group">
-                        <button type="button" class="btn btn-primary checkbox-button btn-crime" onclick="toggleCheckbox(this)">Crime </button>
-                        <button type="button" class="btn btn-primary checkbox-button btn-history" onclick="toggleCheckbox(this)">History</button>
-                        <button type="button" class="btn btn-primary checkbox-button btn-biopic" onclick="toggleCheckbox(this)">Biopic</button>
-                    </div>
-                </div>
+
             </div>
+    <div class="extra">
+     <div class="row">
+          <div class="btn-group col-md-4" role="group">
+     <form method="post" action="{% url 'movie_list2' %}">
+            {% csrf_token %}
+            {% for genre in genres %}
+                <label class="btn btn-primary checkbox-button btn-{{ genre.name|lower }}">
+                    <input type="checkbox" name="genres" value="{{ genre.id }}"> {{ genre.name }}
+                </label>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary" style="background-color:#14a7fa" >Drama</button>
+
+        </form>
+              <div class="btn-group col-md-4" role="group">
+            <!-- Add space between button groups -->
+        </div>
+     <form method="post" action="{% url 'movie_list3' %}">
+            {% csrf_token %}
+            {% for genre in genres %}
+                <label class="btn btn-primary checkbox-button btn-{{ genre.name|lower }}">
+                    <input type="checkbox" name="genres" value="{{ genre.id }}"> {{ genre.name }}
+                </label>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary" style="background-color:#e64e71">Crime</button>
+
+        </form>
+              <div class="btn-group col-md-4" role="group">
+            <!-- Add space between button groups -->
+        </div>
+     <form method="post" action="{% url 'movie_list4' %}">
+            {% csrf_token %}
+            {% for genre in genres %}
+                <label class="btn btn-primary checkbox-button btn-{{ genre.name|lower }}">
+                    <input type="checkbox" name="genres" value="{{ genre.id }}"> {{ genre.name }}
+                </label>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary" style="background-color:#636005">Fiction</button>
+
+        </form>
+              <div class="btn-group col-md-4" role="group">
+            <!-- Add space between button groups -->
+        </div>
+     <form method="post" action="{% url 'movie_list5' %}">
+            {% csrf_token %}
+            {% for genre in genres %}
+                <label class="btn btn-primary checkbox-button btn-{{ genre.name|lower }}">
+                    <input type="checkbox" name="genres" value="{{ genre.id }}"> {{ genre.name }}
+                </label>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary" style="background-color:#91d47b">Biopic</button>
+
+        </form>
+          </div>
+     </div>
+    </div>
              <form method="post" action="{% url 'movie_list' %}">
             {% csrf_token %}
             {% for genre in genres %}
