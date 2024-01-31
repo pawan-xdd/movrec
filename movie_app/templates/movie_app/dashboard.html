@@ -68,6 +68,15 @@
         .btn-adventure {
             background-color: #e83e8c; /* Pink */
         }
+            btn-crime {
+            background-color: #b075eb;
+        }
+            btn-history {
+            background-color: #2ac97f;
+        }
+            btn-biopic {
+            background-color: #972ac9;
+        }
     </style>
     </head>
 <body background="{% static 'bg.jpg' %}">
@@ -101,6 +110,13 @@
                         <button type="button" class="btn btn-primary checkbox-button btn-drama" onclick="toggleCheckbox(this)">Drama</button>
                         <button type="button" class="btn btn-primary checkbox-button btn-mystery" onclick="toggleCheckbox(this)">Mystery</button>
                         <button type="button" class="btn btn-primary checkbox-button btn-adventure" onclick="toggleCheckbox(this)">Adventure</button>
+                    </div>
+                </div>
+             <div class="row">
+                    <div class="btn-group col-md-4" role="group" aria-label="Checkbox Group">
+                        <button type="button" class="btn btn-primary checkbox-button btn-crime" onclick="toggleCheckbox(this)">Crime </button>
+                        <button type="button" class="btn btn-primary checkbox-button btn-history" onclick="toggleCheckbox(this)">History</button>
+                        <button type="button" class="btn btn-primary checkbox-button btn-biopic" onclick="toggleCheckbox(this)">Biopic</button>
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login, logout
 from .models import Genre, Movie
+import random
 
 
 def homepage(request):
@@ -66,15 +67,16 @@ def user_logout(request):
 def dashboard(request):
     return render(request, 'movie_app/dashboard.html')
 
-#def movie_list(request):
- #   if request.method == 'POST':
- #       selected_genre_ids = request.POST.getlist('genres')
- #       selected_genres = Genre.objects.filter(id__in=selected_genre_ids)
- #       movies = Movie.objects.filter(genres__in=selected_genres).distinct()
- #       return render(request, 'movie_app/movie_list.html', {'movies': movies})
- #   else:
-  #      genres = Genre.objects.all()
- #       return render(request, 'movie_app/select_genres.html', {'genres': genres})
+
+# def movie_list(request):
+#   if request.method == 'POST':
+#       selected_genre_ids = request.POST.getlist('genres')
+#       selected_genres = Genre.objects.filter(id__in=selected_genre_ids)
+#       movies = Movie.objects.filter(genres__in=selected_genres).distinct()
+#       return render(request, 'movie_app/movie_list.html', {'movies': movies})
+#   else:
+#      genres = Genre.objects.all()
+#       return render(request, 'movie_app/select_genres.html', {'genres': genres})
 
 def movie_list(request):
     movies = [
@@ -92,7 +94,9 @@ def movie_list(request):
             'rating': '8.5',
             'genres': ['Action', 'Adventure'],
         },
+
+
         # Add more movie entries...
     ]
-
+    # suggestion = random.choice(movies)
     return render(request, 'movie_app/movie_list.html', {'movies': movies})
